@@ -40,6 +40,7 @@ piel.src ="./images/piel-azul3.png"
 const playAgain = new Image();
 playAgain.src ="./images/boton-jugar-de-nuevo.png"
 
+const test = 0
 
 //load audio files
 
