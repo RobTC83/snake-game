@@ -52,6 +52,12 @@ turningSound.src="/audio/swoosh_22.wav"
 const eatingSound = new Audio();
 eatingSound.src="./audio/Biting Into Flesh 03.wav"
 
+// play-again button at the end
+let playAgainBtn = document.getElementById("play-again-button")
+
+playAgainBtn.addEventListener('click',restart)
+
+
 // create snake
 let snake = [];
 
@@ -113,23 +119,22 @@ function collision(head,array){
         return false
     }
 
-// play-again button at the end
-
-
-let playAgainBtn = document.getElementById("play-again-button")
-
-playAgainBtn.addEventListener('click',restart)
 
 function restart() {
-    // erase the button
-   // let playAgainBtn = document.getElementById("play-again-button")
-    playAgainBtn =  document.getElementById("play-again-button").style.display="none";
-    console.log(playAgainBtn)
+    
 
-    //take score to 0
-    ctx.clearRect(0,0,box*19,box*19)
-    score=0;
     //erase the canvas
+    ctx.clearRect(0,0,box*19,box*19)
+    //take score to 0
+    score=0;
+    //create the snake again
+    snake = [];
+
+    snake[0]= {
+        x: 9*box,
+        y: 10*box,
+    };
+    game = setInterval(draw,speed);
     draw()
         }
 
@@ -140,7 +145,7 @@ function restart() {
 
 function draw(){
     // erase the button
-    playAgainBtn =  document.getElementById("play-again-button").style.display="none";
+    playAgainBtn.style.display="none";
     
     // draw the board of the game
         ctx.drawImage(ground,0,0);
