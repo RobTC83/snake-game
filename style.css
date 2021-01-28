@@ -1,0 +1,10 @@
+canvas {
+    border: 1px solid black;
+}
+
+#play-again-button {
+    width: 200px;
+    position:absolute;
+    top:272px;
+    left:210px;
+}
