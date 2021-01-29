@@ -1,10 +1,30 @@
 canvas {
-    border: 1px solid black;
+    border: 20px solid rgba(245, 108, 45, 0.877);
+    border-radius: 12px;
 }
 
 #play-again-button {
     width: 200px;
-    position:absolute;
-    top:272px;
-    left:210px;
+    margin:20px;
+    border-radius: 10px;
+    border: 10px solid rgba(245, 108, 45, 0.877)
 }
+
+body{
+    background: radial-gradient(#FDBB2D, #22C1C3);    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+
+
+#game-screen{
+    display: flex;
+	flex-direction:row-reverse;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+

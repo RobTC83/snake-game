@@ -128,6 +128,7 @@ function restart() {
     ctx.clearRect(0,0,box*19,box*19)
     //take score to 0
     score=0;
+    d=""
     //create the snake again
     snake = [];
 
@@ -225,7 +226,7 @@ function draw(){
     //Game over
     
         if(snakeX < box || snakeX > 17 * box || snakeY < 3*box || snakeY > 17*box || collision(newHead,snake)){
-            ctx.drawImage(gameOverConB,0,0,608,608);
+            ctx.drawImage(gameOverSinB,0,0,608,608);
             document.getElementById("play-again-button").style.display="block";
             gameOverSound.play();
             clearInterval(game);
