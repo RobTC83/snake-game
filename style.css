@@ -10,19 +10,30 @@ canvas {
     border: 10px solid rgba(245, 108, 45, 0.877)
 }
 
+#instrucciones {
+    height: 400px;
+    margin-right:20px;
+    border-radius: 10px;
+    border: 10px solid rgba(245, 108, 45, 0.877)
+
+}
+#columna-izq {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
 body{
     background: radial-gradient(#FDBB2D, #22C1C3);    
-    display:flex;
-    justify-content:center;
-    align-items:center;
 }
 
 
 
 #game-screen{
     display: flex;
-	flex-direction:row-reverse;
-	flex-wrap: wrap;
+	flex-direction:row;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
